@@ -46,4 +46,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function flights(){
+        return $this->belongsToMany(Flight::class)->withTimestamps();
+    }
 }
