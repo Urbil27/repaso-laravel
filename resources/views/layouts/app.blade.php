@@ -64,7 +64,9 @@
           <div class="links">
               <a href="/">@lang('messages.future_flights')</a>
               <a href="{{route('flightPassenger')}}">@lang('messages.flight_passengers')</a>
+              @can('is_admin')
               <a href="{{route('admin')}}">@lang('messages.administration')</a>
+              @endcan
           </div>
           <hr><br><br>
 					<div class="op">

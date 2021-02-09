@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Flight;
+use DateTime;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Date;
+use \App\Models\User;
 class FlightController extends Controller
 {
     /**
@@ -13,9 +17,41 @@ class FlightController extends Controller
      */
     public function index()
     {
-        return view('flights.index');
+        $flights = Flight::All();
+        $flightsToShow = [];
+        foreach($flights as $flight){
+            if($flight->date < new DateTime('now')){
+                array_push($flightsToShow,$flight);
+            }
+        }
+        return view('flights.index')->with('flights',$flights);
     }
-
+    //En esta funcion le paso solo el vuelo numero 2 para luego acceder a los usuarios que han alquilado ese vuelo mediante la pivot en la view
+    /*public function flightPassenger(){
+        $flight = Flight::findOrFail(2);
+        
+        return view('passengers.index')->with('flight',$flight);
+    }*/
+    public function flightPassenger(){
+        $flights = Flight::all();
+        return view('passengers.index')->with('flights',$flights);
+    }
+    public function flightUsers($id){
+        $flight = Flight::findOrFail($id);
+        $users = $flight->users;
+       
+        return response()->json($users);
+    }
+    public function reserve(Request $request){
+        
+        $flight=Flight::findOrFail($request->id);
+        $flight->available_seats= $flight->available_seats-$request->numberOfSeats;
+        $flight->save();
+        $user= User::findOrFail(Auth::user()->id);
+        $user->flights()->attach($request->id);
+        return redirect('/');
+        
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -66,7 +102,7 @@ class FlightController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($seats, $id)
     {
         //
     }

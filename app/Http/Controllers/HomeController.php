@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\User;
 class HomeController extends Controller
 {
     /**
@@ -24,5 +24,15 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+    public function admin(){
+        $usersall=User::All();
+        $users = [];
+        foreach($usersall as $user){
+            if($user->is_admin!=1){
+                array_push($users, $user);
+            }
+        }
+        return view('admin')->with('users', $users);
     }
 }
