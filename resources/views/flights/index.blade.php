@@ -13,7 +13,9 @@
       <th>Origin</th>
       <th>Destiny</th>
       <th>Available Seats</th>
+      @auth
       <th></th>
+      @endauth
     </tr>
     @foreach($flights as $flight)
     
@@ -23,13 +25,15 @@
         <th>{{$flight->origin}}</th>
         <th>{{$flight->destiny}}</th>
         <th>{{$flight->available_seats}}</th>
+        @auth
         <th>  <form method="POST" action="/reserve">
           @csrf
           <input type="hidden" name="id" value="{{$flight->id}}">
           <input type="number" name="numberOfSeats">
           <button class="btn btn-warning" type="submit">Reserve</button>
-        </form></th>
-      
+        </form>
+      </th>
+@endauth      
       </tr>
     
   

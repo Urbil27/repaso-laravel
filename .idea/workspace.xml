@@ -24,7 +24,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a3cd5105-b1e0-4fe3-83cf-30851c0b402f" name="Default Changelist" comment="Deleted passengers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/passengers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/passengers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/flights/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/flights/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP from XAMPP">
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
@@ -156,10 +160,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -208,6 +213,7 @@
       <workItem from="1612090623749" duration="846000" />
       <workItem from="1612108363632" duration="9159000" />
       <workItem from="1612119491350" duration="2151000" />
+      <workItem from="1612952374870" duration="1373000" />
     </task>
     <task id="LOCAL-00001" summary="Seeders and basic models">
       <created>1612112667641</created>
@@ -246,48 +252,8 @@
     <MESSAGE value="Deleted passengers" />
     <option name="LAST_COMMIT_MESSAGE" value="Deleted passengers" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="728" y="247" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612111021531">
-      <screen x="72" y="27" width="1846" height="925" />
-    </state>
-    <state x="728" y="247" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1846.925@72.27.1846.925" timestamp="1612111021531" />
-    <state x="702" y="245" width="424" height="491" key="FileChooserDialogImpl" timestamp="1612059759256">
-      <screen x="72" y="27" width="1646" height="918" />
-    </state>
-    <state x="702" y="245" width="424" height="491" key="FileChooserDialogImpl/72.27.1646.918@72.27.1646.918" timestamp="1612059759256" />
-    <state x="778" y="247" width="424" height="491" key="FileChooserDialogImpl/72.27.1846.925@72.27.1846.925" timestamp="1612037968002" />
-    <state width="1800" height="232" key="GridCell.Tab.0.bottom" timestamp="1612121831289">
-      <screen x="72" y="27" width="1846" height="925" />
-    </state>
-    <state width="1600" height="230" key="GridCell.Tab.0.bottom/72.27.1646.918@72.27.1646.918" timestamp="1612060944092" />
-    <state width="1800" height="232" key="GridCell.Tab.0.bottom/72.27.1846.925@72.27.1846.925" timestamp="1612121831289" />
-    <state width="1800" height="232" key="GridCell.Tab.0.center" timestamp="1612121831288">
-      <screen x="72" y="27" width="1846" height="925" />
-    </state>
-    <state width="1600" height="230" key="GridCell.Tab.0.center/72.27.1646.918@72.27.1646.918" timestamp="1612060944091" />
-    <state width="1800" height="232" key="GridCell.Tab.0.center/72.27.1846.925@72.27.1846.925" timestamp="1612121831288" />
-    <state width="1800" height="232" key="GridCell.Tab.0.left" timestamp="1612121831287">
-      <screen x="72" y="27" width="1846" height="925" />
-    </state>
-    <state width="1600" height="230" key="GridCell.Tab.0.left/72.27.1646.918@72.27.1646.918" timestamp="1612060944090" />
-    <state width="1800" height="232" key="GridCell.Tab.0.left/72.27.1846.925@72.27.1846.925" timestamp="1612121831287" />
-    <state width="1800" height="232" key="GridCell.Tab.0.right" timestamp="1612121831288">
-      <screen x="72" y="27" width="1846" height="925" />
-    </state>
-    <state width="1600" height="230" key="GridCell.Tab.0.right/72.27.1646.918@72.27.1646.918" timestamp="1612060944091" />
-    <state width="1800" height="232" key="GridCell.Tab.0.right/72.27.1846.925@72.27.1846.925" timestamp="1612121831288" />
-    <state x="590" y="225" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1612119421292">
-      <screen x="72" y="27" width="1846" height="925" />
-    </state>
-    <state x="590" y="225" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1846.925@72.27.1846.925" timestamp="1612119421292" />
-    <state x="659" y="220" width="672" height="677" key="run.anything.popup" timestamp="1612121831132">
-      <screen x="72" y="27" width="1846" height="925" />
-    </state>
-    <state x="595" y="219" width="672" height="672" key="run.anything.popup/72.27.1646.918@72.27.1646.918" timestamp="1612059972822" />
-    <state x="659" y="220" width="672" height="677" key="run.anything.popup/72.27.1846.925@72.27.1846.925" timestamp="1612121831132" />
-    <state x="658" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1612116743804">
-      <screen x="72" y="27" width="1846" height="925" />
-    </state>
-    <state x="658" y="227" width="672" height="678" key="search.everywhere.popup/72.27.1846.925@72.27.1846.925" timestamp="1612116743804" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
